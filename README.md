@@ -60,7 +60,7 @@ A modern and responsive calculator built using **HTML, CSS, and JavaScript**. Th
 ## 📂 Project Structure
 
 ```bash
-calculator/
+calculator-app/
 │
 ├── index.html
 ├── style.css
