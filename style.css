@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.calculator {
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+#screen {
+  width: 100%;
+  height: 80px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  text-align: right;
+  font-size: 2rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow-x: auto;
+  margin-bottom: 18px;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  height: 65px;
+  border: none;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.operator {
+  background: #ff9500;
+}
+
+.operator:hover {
+  background: #ffad33;
+}
+
+.equal {
+  background: #00c853;
+}
+
+.equal:hover {
+  background: #00e676;
+}
+
+.special {
+  background: #ff3d57;
+}
+
+.special:hover {
+  background: #ff5f77;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  .calculator {
+    max-width: 340px;
+    padding: 16px;
+  }
+
+  .buttons {
+    gap: 8px;
+  }
+
+  .btn {
+    height: 56px;
+    font-size: 1rem;
+    border-radius: 14px;
+  }
+
+  #screen {
+    height: 68px;
+    font-size: 1.5rem;
+    padding: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .calculator {
+    max-width: 360px;
+    padding: 16px;
+  }
+
+  .btn {
+    height: 60px;
+    font-size: 1.1rem;
+  }
+
+  #screen {
+    height: 73px;
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .calculator {
+    max-width: 400px;
+  }
+
+  .btn {
+    height: 68px;
+    font-size: 1.25rem;
+  }
+
+  #screen {
+    height: 85px;
+    font-size: 2rem;
+  }
+}
